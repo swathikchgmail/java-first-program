@@ -2,7 +2,6 @@ package com.h2;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
-import java.util.Arrays;
 
 public class SavingsCalculator {
     public float[] credits;
@@ -13,7 +12,7 @@ public class SavingsCalculator {
         this.debts = debts;
     }
 
-    private float sumOfCredits(float[] credits) {
+    private static float sumOfCredits(float[] credits) {
         float sum = 0.0f;
         for (int i = 0; i < credits.length; i++) {
             sum += credits[i];
@@ -21,7 +20,7 @@ public class SavingsCalculator {
         return sum;
     }
 
-    private float sumOfDebits(float[] debits) {
+    private static float sumOfDebits(float[] debits) {
         float sum = 0.0f;
         for (int i = 0; i < debits.length; i++) {
             sum += debits[i];
