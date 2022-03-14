@@ -21,11 +21,10 @@ public class BestLoanRates {
         int loanYears = scanner.nextInt();
         float bestRate = getRates(loanYears);
         if(bestRate != 0.0f) {
-            System.out.println("Best Available Rate:" + bestRate + "%");
+            System.out.println("Best Available Rate: " + bestRate + "%");
         } else {
             System.out.println("No available rates for term:");
         }
-
     }
     public static float getRates(int loanTermInYears) {
         if(bestRates.containsKey(loanTermInYears))
