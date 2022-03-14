@@ -7,7 +7,7 @@ public class SavingsCalculator {
     public float[] credits;
     public float[] debts;
 
-    public SavingsCalculator() {
+    public SavingsCalculator(float[] credits, float[] debts) {
         this.credits = credits;
         this.debts = debts;
     }
@@ -35,8 +35,9 @@ public class SavingsCalculator {
         int remainingDays = totalDaysInMonth - date.getDayOfMonth();
         return remainingDays;
     }
+
     private static float calculate(float[] credits, float[] debts) {
-        return  sumOfDebits(debts) - sumOfCredits(credits);
+        return sumOfDebits(debts) - sumOfCredits(credits);
     }
 
     public static void main(String[] args) {
@@ -45,11 +46,11 @@ public class SavingsCalculator {
         float[] credits = new float[creditsAsString.length];
         float[] debts = new float[debtsAsString.length];
 
-        for(int i = 0; i < creditsAsString.length; i++) {
+        for (int i = 0; i < creditsAsString.length; i++) {
             credits[i] = Float.parseFloat(creditsAsString[i]);
         }
 
-        for(int i = 0; i < debtsAsString.length; i++) {
+        for (int i = 0; i < debtsAsString.length; i++) {
             debts[i] = Float.parseFloat(debtsAsString[i]);
         }
 
