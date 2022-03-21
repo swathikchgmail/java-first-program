@@ -31,13 +31,18 @@ public class Finance {
         switch (command) {
             case BEST_LOAN_RATES:
                 System.out.println("Finding best loan rates ...");
-                //com.h2.BestLoanRates.getRates();
+                com.h2.BestLoanRates.getRates(Integer.parseInt(arguments[0]));
+                return;
             case SAVINGS_CALCULATOR:
                 System.out.println("Finding your net savings ...");
-                //com.h2.SavingsCalculator.calculate()
+              //  float[] credits =  arguments[1];
+               // float[] debits = arguments[2];
+               // com.h2.SavingsCalculator.calculate(arguments[1], arguments[2])
+                return;
             case MORTGAGE_CALCULATOR:
                 System.out.println("Finding your monthly payment ...");
                 //com.h2.MortgageCalculator()
+                return;
         }
 
     }
