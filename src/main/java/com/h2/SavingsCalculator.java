@@ -41,12 +41,12 @@ public class SavingsCalculator {
         return remainingDays;
     }
 
-    public static float calculate(float[] credits, float[] debts) {
-        return sumOfDebits(debts) - sumOfCredits(credits);
+    public static float calculate(float[] credits, float[] debits) {
+        return sumOfCredits(credits) - sumOfDebits(debits) ;
     }
 
     public static void main(String[] args) {
-      
+
         String[] creditsAsString = args[0].split(",");
         String[] debitsAsString = args[1].split(",");
 
