@@ -70,7 +70,7 @@ public class Module2_Test {
     @Test
     public void m02_01_testDoubleTheNumber() {
         for (int i = 1; i < 10; i++) {
-            assertEquals(2 * i, App.doubleTheNumber(i), i + " should be " + 2 * i);
+            assertEquals(2 * i, com.h2.App.doubleTheNumber(i), i + " should be " + 2 * i);
         }
     }
 
