@@ -46,20 +46,22 @@ public class SavingsCalculator {
     }
 
     public static void main(String[] args) {
+      
         String[] creditsAsString = args[0].split(",");
-        String[] debtsAsString = args[1].split(",");
+        String[] debitsAsString = args[1].split(",");
+
         float[] credits = new float[creditsAsString.length];
-        float[] debts = new float[debtsAsString.length];
+        float[] debits = new float[debitsAsString.length];
 
         for (int i = 0; i < creditsAsString.length; i++) {
             credits[i] = Float.parseFloat(creditsAsString[i]);
         }
 
-        for (int i = 0; i < debtsAsString.length; i++) {
-            debts[i] = Float.parseFloat(debtsAsString[i]);
+        for (int i = 0; i < debitsAsString.length; i++) {
+            debits[i] = Float.parseFloat(debitsAsString[i]);
         }
 
-        float netSavings = calculate(credits, debts);
+        float netSavings = calculate(credits, debits);
 
         System.out.println("Net Savings = " + netSavings + ", remaining days in month = " +
                 remainingDaysInMonth(LocalDate.now()));
