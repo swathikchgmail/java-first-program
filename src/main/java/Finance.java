@@ -1,3 +1,10 @@
+
+
+
+import com.h2.BestLoanRates;
+import com.h2.MortgageCalculator;
+import com.h2.SavingsCalculator;
+
 import java.util.Arrays;
 import java.util.Map;
 
@@ -34,15 +41,15 @@ public class Finance {
         switch (command) {
             case BEST_LOAN_RATES:
                 System.out.println("Finding best loan rates ...");
-                com.h2.BestLoanRates.main(arguments);
+                BestLoanRates.main(arguments);
                 return;
             case SAVINGS_CALCULATOR:
                 System.out.println("Finding your net savings ...");
-               com.h2.SavingsCalculator.main(arguments);
+                SavingsCalculator.main(arguments);
                 return;
             case MORTGAGE_CALCULATOR:
                 System.out.println("Finding your monthly payment ...");
-                com.h2.MortgageCalculator.main(arguments);
+                MortgageCalculator.main(arguments);
                 return;
         }
 
@@ -57,9 +64,10 @@ public class Finance {
         boolean isValidCommand = validateCommandArguments(args);
 
         if(!isValidCommand) {
-            commandsToUsage.get(args[0]);
+            System.out.println(commandsToUsage.get(args[0]));
             return;
         }
+
         executeCommand(command, Arrays.copyOfRange(args, 1, args.length));
     }
 }
