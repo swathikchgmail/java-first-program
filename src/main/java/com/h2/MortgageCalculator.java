@@ -9,7 +9,7 @@ public class MortgageCalculator {
     private static double monthlyPayment;
     private int termInYears;
 
-    public MortgageCalculator(long loanAmount, float annualRate, int termInYears) {
+    public MortgageCalculator(long loanAmount,  int termInYears, float annualRate) {
         this.loanAmount = loanAmount;
         this.annualRate = annualRate;
         this.termInYears = termInYears;
@@ -52,7 +52,7 @@ public class MortgageCalculator {
         int termInYears = Integer.parseInt(args[1]);
         float annualRate = Float.parseFloat(args[2]);
 
-        MortgageCalculator calculator = new MortgageCalculator(loanAmount, annualRate, termInYears);
+        MortgageCalculator calculator = new MortgageCalculator(loanAmount, termInYears, annualRate);
         calculator.calculateMonthlyPayment();
         System.out.println(calculator.toString());
     }
