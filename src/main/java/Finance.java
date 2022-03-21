@@ -17,10 +17,13 @@ public class Finance {
 
         switch (args[0]) {
             case BEST_LOAN_RATES:
+                System.out.println(commandsToUsage.get(1));
                 return args.length == 1;
             case SAVINGS_CALCULATOR:
+                System.out.println(commandsToUsage.get(2));
                 return args.length == 3;
             case MORTGAGE_CALCULATOR:
+                System.out.println(commandsToUsage.get(3));
                 return args.length == 4;
         }
         return false;
@@ -52,6 +55,7 @@ public class Finance {
             return;
         }
         boolean isValidCommand = validateCommandArguments(args);
+
         if(!isValidCommand) {
             commandsToUsage.get(args[0]);
             return;
